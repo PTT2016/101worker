@@ -20,7 +20,8 @@ modules = [
     'wiki2tagclouds',
     'moretagclouds',
     'zip',
-    'mongodump'
+    'mongodump',
+		'antlrMetrics'
 ]
 
 modules = [import_module(module) for module in modules]

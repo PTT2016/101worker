@@ -2,6 +2,8 @@
 from antlr4 import *
 from io import StringIO
 
+from LexerAdaptor import LexerAdaptor
+
 
 def serializedATN():
     with StringIO() as buf:

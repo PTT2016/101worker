@@ -1,8 +1,9 @@
 import os
 import json
 from antlr4 import *
-from MyGrammarLexar import MyGrammarLexar
-from MyGrammarParser import MyGrammarParser
+from ANTLRv4Lexer import ANTLRv4Lexer
+from ANTLRv4Parser import ANTLRv4Parser
+from LexerAdaptor import LexerAdaptor
 
 def main(argv):
 	input=FileStream(argv[1])
@@ -11,8 +12,6 @@ def main(argv):
 	parser = MyGrammarParser(stream)
 	tree = paser.grammarSpec()
 
-if __name__ == '__main__':
-	main(sys.argv)
 
 
 config = {

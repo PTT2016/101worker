@@ -1,5 +1,19 @@
 import os
 import json
+from antlr4 import *
+from MyGrammarLexar import MyGrammarLexar
+from MyGrammarParser import MyGrammarParser
+
+def main(argv):
+	input=FileStream(argv[1])
+	lexer=MyGrammerLexer(input)
+	stream = CommonTokenStream(lexer)
+	parser = MyGrammarParser(stream)
+	tree = paser.StartRule()
+
+if __name__ == '__main__':
+	main(sys.argv)
+
 
 config = {
     'wantdiff': True,

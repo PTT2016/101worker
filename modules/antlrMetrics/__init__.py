@@ -9,7 +9,7 @@ def main(argv):
 	lexer=MyGrammerLexer(input)
 	stream = CommonTokenStream(lexer)
 	parser = MyGrammarParser(stream)
-	tree = paser.StartRule()
+	tree = paser.grammarSpec()
 
 if __name__ == '__main__':
 	main(sys.argv)
